@@ -10,6 +10,8 @@ def download(nums=''):
     args: 
     - nums: str, specify how many categories you want to download to your device
     """
+    if not os.path.isdir(os.path.join("./", "data")):
+        os.makedirs(os.path.join("./", "data"))
     # The file 'categories.txt' includes all categories you want to download as dataset
     with open("model_resources/DataUtils/"+nums+"categories.txt", "r") as f:
         classes = f.readlines()
@@ -20,7 +22,7 @@ def download(nums=''):
         cls_url = c.replace('_', '%20')
         path = base+cls_url+'.npy'
         print(path)
-        urllib.request.urlretrieve(path, './data/'+c+'.npy')
+        urllib.request.urlretrieve(path, 'data/'+c+'.npy')
 
 
 if __name__ == '__main__':
