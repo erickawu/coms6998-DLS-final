@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from random import randint
 
 
-def generate_dataset(rawdata_root="Data", target_root="Dataset", vfold_ratio=0.2, max_samples_per_class=5000, show_imgs=False):
+def generate_dataset(rawdata_root="data", target_root="dataset", vfold_ratio=0.2, max_samples_per_class=5000, show_imgs=False):
     """
     args:
     - rawdata_root: str, specify the directory path of raw data
@@ -120,7 +120,7 @@ def generate_dataset(rawdata_root="Data", target_root="Dataset", vfold_ratio=0.2
     print("Great, data_cache has been saved into disk.")
     print("*"*50)
 
-    with open("./DataUtils/class_names.txt", 'w') as f:
+    with open("./data/class_names.txt", 'w') as f:
         for i in range(len(class_names)):
             f.write(
                 "class name: "+class_names[i]+"\t\tnumber of samples: "+class_samples_num[i]+"\n")

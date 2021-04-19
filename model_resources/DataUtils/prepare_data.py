@@ -11,7 +11,7 @@ def download(nums=''):
     - nums: str, specify how many categories you want to download to your device
     """
     # The file 'categories.txt' includes all categories you want to download as dataset
-    with open("./DataUtils/"+nums+"categories.txt", "r") as f:
+    with open("model_resources/DataUtils/"+nums+"categories.txt", "r") as f:
         classes = f.readlines()
     classes = [c.replace('\n', '').replace(' ', '_') for c in classes]
     print(classes)
@@ -20,7 +20,7 @@ def download(nums=''):
         cls_url = c.replace('_', '%20')
         path = base+cls_url+'.npy'
         print(path)
-        urllib.request.urlretrieve(path, './Data/'+c+'.npy')
+        urllib.request.urlretrieve(path, './data/'+c+'.npy')
 
 
 if __name__ == '__main__':
