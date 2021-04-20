@@ -4,65 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>:)</title>
-    <style>
-      #canvas-container {
-        display: block;
-        border: 5px solid black;
-        margin: 50px;
-        width: 500px;
-        position: relative;
-      }
-
-      canvas {
-        display: block;
-      }
-
-      button {
-        border: 1px solid black;
-        background-color: #ededed;
-        padding: 5px;
-      }
-
-      button.active {
-        background-color: #888;
-      }
-
-      .color {
-        color: white;
-      }
-
-      #red {
-        background-color: red;
-      }
-
-      #green {
-        background-color: green;
-      }
-
-      #blue {
-        background-color: blue;
-      }
-
-      #black {
-        background-color: black;
-      }
-    </style>
+    <link rel='stylesheet' type='text/css' href = 'styles.css'>
   </head>
 
   <body>
-
-    <p>Canvas:</p>
+    <header>hi! draw something below. </header>
     <div id="canvas-container"><canvas id="cfd"></canvas></div>
+    <div id="canvas-buttons">
     <button id="clear">Clear canvas</button>
     <button id="save">Save canvas</button>
     <button id="undo">Undo</button>
     <button id="redo">Redo</button>
+    </div>
     <br />
-    <br />
+    <!--
     <button id="red" class="color">Red</button>
     <button id="green" class="color">Green</button>
     <button id="blue" class="color">Blue</button>
     <button id="black" class="color">Black</button>
+    -->
     <br />
     <br />
     <br />
@@ -71,8 +31,8 @@
   <script>
     const cfd = new CanvasFreeDrawing.default({
       elementId: 'cfd',
-      width: 500,
-      height: 500,
+      width: 400,
+      height: 400,
       showWarnings: true,
     });
     const textarea = document.getElementById('backup');
@@ -85,6 +45,7 @@
     document.getElementById('undo').addEventListener('click', () => cfd.undo());
     document.getElementById('redo').addEventListener('click', () => cfd.redo());
 
+    /*
     document
       .getElementById('red')
       .addEventListener('click', () => cfd.setDrawingColor([255, 0, 0]));
@@ -97,5 +58,6 @@
     document
       .getElementById('black')
       .addEventListener('click', () => cfd.setDrawingColor([0, 0, 0]));
+      */
   </script>
 </html>
