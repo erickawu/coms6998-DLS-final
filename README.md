@@ -5,4 +5,4 @@ To download the QuickDraw data, clone the repository and run the following comma
 ```
 python model_resources/DataUtils/prepare_data.py -c 100 -d 1 -show
 ```
-to populate the folders `data` and `dataset` with 5000 samples each from 100 classes of Google QuickDraw.
+to populate the folders `data` with 100 .npy files downloaded from Google Quickdraw and `dataset` with training and testsing files consisting of a total of 5000 samples (80-20 split) each from the 100 QuickDraw classes.
