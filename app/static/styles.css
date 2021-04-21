@@ -5,7 +5,7 @@ header {
   margin: 30px;
 }
 
-header {
+header.result {
   text-align: center;
   font-family: PT Mono;
   font-size: 14px;
