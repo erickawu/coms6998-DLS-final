@@ -33,16 +33,16 @@ classes = [
 secondaries = [
         "eating a banana",
         "eating grapes",
-        "bowling",
+        "shedding many tears",
         "painting",
         "exploding",
         "driving a tractor",
         "studying",
         "drinking whiskey",
-        "debating",
+        "falling",
         "struck by lightning",
         "trying its best",
-        "that doesn’t like the color blue",
+        "that doesn’t like people",
         "that never changes",
         "that solves world hunger",
         "in the closet",
@@ -93,7 +93,7 @@ def model_eval(image_bytes):
         logits_per_image, _ = model_trained(image, class_text_tokens)
         probs = logits_per_image.softmax(dim=-1).cpu().numpy()
         # make prediction
-        pred = class_names[argmax(list(probs)[0])]
+        pred = target_names[argmax(list(probs)[0])]
         print('predicted', pred)
 
     return {'prediction': pred}
