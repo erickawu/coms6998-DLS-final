@@ -289,6 +289,7 @@
       };
       // DRAW
       CanvasFreeDrawing.prototype.draw = function (position) {
+        document.getElementById("results").innerText = "";
         var _this = this;
         position.forEach(function (_a, i) {
           var x = _a.x,
@@ -403,6 +404,7 @@
         this.strokeColor = this.toValidColor(color);
       };
       CanvasFreeDrawing.prototype.clear = function () {
+        document.getElementById("results").innerText = "";
         this.context.clearRect(0, 0, this.width, this.height);
         this.positions = [];
         this.imageRestored = false;
@@ -419,7 +421,6 @@
           body: JSON.stringify({ dataURI: this.canvas.toDataURL() }),
         });
         const data = await result.json();
-        print(data);
         document.getElementById(
           "results"
         ).innerText = `Did you draw a ${data.prediction}?`;
@@ -438,6 +439,7 @@
         } else {
           this.logWarning("There are no more undos left.");
         }
+        document.getElementById("results").innerText = "";
       };
       // REDO
       CanvasFreeDrawing.prototype.redo = function () {
