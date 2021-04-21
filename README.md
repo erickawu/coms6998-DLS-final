@@ -16,7 +16,7 @@ Run cells in `model/clip_quickdraw_zeroshot.ipynb` to test CLIP accuracy on the 
 
 To deploy the web server to play Pictionary game powered by the model (it'll label your sketches!):
 
-1. Clone this repository, and clone the OpenAI CLIP repository at https://github.com/openai/CLIP into the `app` folder.
+1. Clone this repository, and clone the OpenAI CLIP repository at https://github.com/openai/CLIP.
 2. Make sure that `pipenv` is installed
 3. Install dependencies by running `pipenv install`
 4. Start the local web server with `FLASK_APP=app/app.py DEBUG_MODE=1 pipenv run flask run` (you can also turn off debug mode if you want)
