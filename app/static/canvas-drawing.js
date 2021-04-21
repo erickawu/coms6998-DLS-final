@@ -418,7 +418,11 @@
           },
           body: JSON.stringify({ dataURI: this.canvas.toDataURL() }),
         });
-        console.log(result);
+        const data = await result.json();
+        print(data);
+        document.getElementById(
+          "results"
+        ).innerHTML = `<p>Did you draw a ${data.prediction}?</p>`;
         return this.canvas.toDataURL();
       };
       // UNDO
