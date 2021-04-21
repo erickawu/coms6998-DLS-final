@@ -9,7 +9,10 @@
 
   <body>
     <header>hi! generate a prompt and draw something below. </header>
-    <header id='results'></header>
+    <div id="prompt-display">
+      <button onclick ="generate_prompt()" id="gen">your prompt is... </button>
+      <div id="prompt"></div>
+    </div>
     <div id="canvas-container"><canvas id="cfd"></canvas></div>
     <div id="canvas-buttons">
     <button id="clear">Clear canvas</button>
@@ -17,6 +20,7 @@
     <button id="undo">Undo</button>
     <button id="redo">Redo</button>
     </div>
+    <header id='results'></header>
     <br />
     <!--
     <button id="red" class="color">Red</button>
@@ -29,6 +33,7 @@
     <br />
   </body>
   <script src="canvas-drawing.js"></script>
+  <script src="prompt-generator.js"></script>
   <script>
     const cfd = new CanvasFreeDrawing.default({
       elementId: 'cfd',
@@ -45,20 +50,5 @@
     });
     document.getElementById('undo').addEventListener('click', () => cfd.undo());
     document.getElementById('redo').addEventListener('click', () => cfd.redo());
-
-    /*
-    document
-      .getElementById('red')
-      .addEventListener('click', () => cfd.setDrawingColor([255, 0, 0]));
-    document
-      .getElementById('green')
-      .addEventListener('click', () => cfd.setDrawingColor([0, 255, 0]));
-    document
-      .getElementById('blue')
-      .addEventListener('click', () => cfd.setDrawingColor([0, 0, 255]));
-    document
-      .getElementById('black')
-      .addEventListener('click', () => cfd.setDrawingColor([0, 0, 0]));
-      */
   </script>
 </html>

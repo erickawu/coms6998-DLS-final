@@ -1,8 +1,9 @@
 header {
   text-align: center;
-  font-family: PT Mono;
+	font-family: PT Mono;
   font-size: 20px;
-  margin: 30px;
+  margin-top: 45px;
+  margin-bottom: 30px;
 }
 
 header.result {
@@ -38,6 +39,38 @@ button {
   padding: 5px;
   display: inline-block;
 }
+
+#gen {
+  margin-bottom: 5px;
+}
+
+#prompt-display {
+  position: static;
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+#ans-display {
+  position: static;
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+#guess {
+  text-align: center;
+	font-family: PT Mono;
+  font-size: 25px;
+  margin: 30px;
+}
+
 
 #canvas-buttons {
   position: static;
