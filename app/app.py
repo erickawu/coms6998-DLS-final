@@ -62,7 +62,7 @@ def model_eval(image_bytes):
     pil_im = Image.open(image_bytes)
     image = transform(pil_im).unsqueeze(0).to(DEVICE)
     with torch.no_grad():
-        logits_per_image, logits_per_text = model_trained(image, class_text_tokens)
+        logits_per_image, _ = model_trained(image, class_text_tokens)
         probs = logits_per_image.softmax(dim=-1).cpu().numpy()
         # make prediction
         pred = class_names[argmax(list(probs)[0])]

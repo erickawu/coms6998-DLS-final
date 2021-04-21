@@ -423,7 +423,7 @@
         const data = await result.json();
         document.getElementById(
           "results"
-        ).innerText = `Did you draw a ${data.prediction}?`;
+        ).innerText = `did you draw a ${data.prediction}?`;
         return this.canvas.toDataURL();
       };
       // UNDO

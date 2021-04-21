@@ -10,7 +10,7 @@ header.result {
   text-align: center;
   font-family: PT Mono;
   font-size: 14px;
-  margin: 30px;
+  margin: 20px;
 }
 
 button,
@@ -63,14 +63,6 @@ button {
   align-items: center;
   text-align: center;
 }
-
-#guess {
-  text-align: center;
-	font-family: PT Mono;
-  font-size: 25px;
-  margin: 30px;
-}
-
 
 #canvas-buttons {
   position: static;
