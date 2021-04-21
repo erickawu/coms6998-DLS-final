@@ -422,7 +422,7 @@
         print(data);
         document.getElementById(
           "results"
-        ).innerHTML = `<p>Did you draw a ${data.prediction}?</p>`;
+        ).innerText = `Did you draw a ${data.prediction}?`;
         return this.canvas.toDataURL();
       };
       // UNDO

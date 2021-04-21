@@ -1,12 +1,20 @@
 header {
   text-align: center;
-	font-family: PT Mono;
-  font-size: 18px;
+  font-family: PT Mono;
+  font-size: 20px;
   margin: 30px;
 }
 
-button, body {
-  font-family: 'Inconsolata';
+header {
+  text-align: center;
+  font-family: PT Mono;
+  font-size: 14px;
+  margin: 30px;
+}
+
+button,
+body {
+  font-family: "Inconsolata";
   font-size: 13px;
   letter-spacing: 0.22px;
 }
