@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "/Users/jz/.python_venvs/app-eOwi1-sn/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "editor.defaultFormatter": null,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.formatOnSave": true
+}
