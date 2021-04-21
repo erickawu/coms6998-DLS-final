@@ -18,4 +18,9 @@ To deploy the web server to play Pictionary game powered by the model (it'll lab
 
 1. Make sure that `pipenv` is installed
 2. Install dependencies by running `pipenv install`
-3. Start the web server with `FLASK_APP=app/app.py DEBUG_MODE=1 pipenv run flask run` (you can also turn off debug mode if you want)
+3. Start the local web server with `FLASK_APP=app/app.py DEBUG_MODE=1 pipenv run flask run` (you can also turn off debug mode if you want)
+
+## Prod web server
+
+1. Pipenv install dependencies
+2. From the root directory, run `gunicorn --bind 0.0.0.0:8000 app.app:app`
