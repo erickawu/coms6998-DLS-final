@@ -1,8 +1,8 @@
 function generate_prompt() {
     var classes = [
-        "envelope", "triangle", "paper clip",
+        "envelope", "cat", "paper clip",
         "lightbulb", "coffee cup", "smiley face", "flower",
-        "diving board", "car", "apple", "bicycle", "ladder",
+        "mushroom", "car", "apple", "bicycle", "ladder",
         "eye", "cloud", "hammer",
     ];
     var secondaries = [

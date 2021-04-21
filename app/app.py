@@ -24,7 +24,35 @@ with open(os.path.join(
     '100categories.txt')
     ) as f:
     class_names = f.read().splitlines()
+classes = [
+        "envelope", "cat", "paper clip",
+        "lightbulb", "coffee cup", "smiley face", "flower",
+        "mushroom", "car", "apple", "bicycle", "ladder",
+        "eye", "cloud", "hammer",
+]
+secondaries = [
+        "eating a banana",
+        "eating grapes",
+        "bowling",
+        "painting",
+        "exploding",
+        "driving a tractor",
+        "studying",
+        "drinking whiskey",
+        "debating",
+        "struck by lightning",
+        "trying its best",
+        "that doesn’t like the color blue",
+        "that never changes",
+        "that solves world hunger",
+        "in the closet",
+]
+fun_prompts = []
+for c in classes:
+    for v in secondaries:
+        fun_prompts.append(c + " " + v)
 target_names = ["a sketch of a " + cls for cls in class_names]
+target_names.extend(["a sketch of a " + cls for cls in fun_prompts])
 class_text_tokens = clip.tokenize(target_names).to(DEVICE)
 print('labels: ', target_names)
 
